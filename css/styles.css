@@ -635,4 +635,37 @@ address {
 .footer-social-link:is(:hover, :focus) {
 	background-color: var(--icon-salat);
 }
+.footer-subscribe {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	width: 165px;
+	height: 40px;
+	background: var(--firma-color);
+	border: 1px solid var(--firma-color);
+	border-radius: 4px;
+	padding: 8px 24px;
+	gap: 16px;
+}
+.footer-form {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+input {
+	padding: 8px;
+	font-family: inherit;
+	width: 264px;
+	height: 40px;
+	background-color: var(--firma-background-color);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+}
+
 /* ---- /footer----*/
