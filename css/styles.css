@@ -189,7 +189,7 @@ address {
 }
 .modal {
 	width: 408px;
-	min-height: 576px;
+	min-height: 584px;
 	background: #fcfcfc;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -231,7 +231,17 @@ address {
 	fill: var(--white-color);
 	background-color: var(--hero-btn-color);
 }
-
+.modal-form-link {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: calc(16 / 12);
+	letter-spacing: 0.04em;
+	text-decoration-line: underline;
+	color: var(--firma-color);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .modal-form {
 	padding-top: 72px;
 	padding-left: 24px;
@@ -244,17 +254,18 @@ address {
 	line-height: 1.5;
 	text-align: center;
 	letter-spacing: 0.02em;
+	margin-bottom: 17px;
 
 	color: var(--firma-background-color);
 }
 .hero-modal-form {
 	text-align: left;
 }
-.hero-modal-form label {
+.modal-form-label {
 	display: block;
 	font-weight: 400;
 	font-size: 12px;
-	line-height: 1.17;
+	line-height: calc(16 / 12);
 	letter-spacing: 0.01em;
 	color: var(--grey-color);
 	margin-bottom: 4px;
@@ -272,17 +283,39 @@ address {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	outline: none;
 }
-.modal-form-check {
+.modal-form-check:checked + .modal-form-check-desk span {
+	background-color: var(--firma-color);
+	fill: var(--white-color);
+	border-color: var(--firma-color);
 }
-.modal-form-check-desk::before {
-	content: "";
-	display: block;
+.modal-form-check:focus + .modal-form-check-desk span {
+	outline: 1px solid var(--firma-color);
+}
+.modal-form-check-desk {
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--grey-color);
+}
+
+.modal-form-check-desk span {
 	box-sizing: border-box;
 	cursor: pointer;
 	width: 16px;
 	height: 16px;
+	margin-right: 8px;
 	border: 1.25px solid var(--firma-background-color);
 	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: transparent;
+	transition-property: background-color, fill, border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-modal-send {
 	display: flex;
@@ -290,6 +323,7 @@ address {
 	justify-content: center;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 24px;
 	width: 169px;
 	height: 56px;
 	padding: 16px 32px;
@@ -355,7 +389,7 @@ address {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 12px;
-	line-height: (16/12) px;
+	line-height: calc(16 / 12);
 	letter-spacing: 0.04em;
 	color: rgba(117, 117, 117, 0.5);
 }
@@ -778,6 +812,12 @@ address {
 	border-radius: 4px;
 	padding: 8px 24px;
 	gap: 16px;
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-subscribe:is(:hover, :focus) {
+	background-color: var(--hero-btn-color);
 }
 .footer-form {
 	display: flex;
@@ -793,6 +833,12 @@ address {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
+	outline: none;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.footer-form input:focus {
+	border-color: var(--firma-color);
+}
 /* ---- /footer----*/

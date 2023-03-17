@@ -56,7 +56,7 @@
 						<div class="modal-form">
 							<h2 class="hero-modal-title">Leave your contacts and we will call you back</h2>
 							<form class="hero-modal-form" name="signup_form" autocomplete="on" novalidate>
-								<label for="username"> Name</label>
+								<label class="modal-form-label" for="username"> Name</label>
 								<span class="form-boks">
 									<input type="text" name="username" id="username" autofocus />
 									<span class="modal-form-icon"
@@ -64,7 +64,7 @@
 											<use href="./images/symbol-defs.svg#icon-person-black"></use></svg></span
 								></span>
 
-								<label for="phone_number"> Phone</label>
+								<label class="modal-form-label" for="phone_number"> Phone</label>
 								<span class="form-boks">
 									<input type="tel" name="phone_number" id="phone_number" />
 									<span class="modal-form-icon"
@@ -73,7 +73,7 @@
 										</svg> </span
 								></span>
 
-								<label for="email"> Mail</label>
+								<label class="modal-form-label" for="email"> Mail</label>
 								<span class="form-boks">
 									<input type="email" name="email" id="email" />
 									<span class="modal-form-icon"
@@ -81,11 +81,19 @@
 											<use href="./images/symbol-defs.svg#icon-email-black"></use>
 										</svg> </span
 								></span>
-								<label for="Comment"> Comment</label>
+								<label class="modal-form-label" for="Comment"> Comment</label>
 								<textarea class="modal-form-comment" name="Comment" placeholder="Text input" id="Comment"></textarea>
 
-								<input class="modal-form-check" type="checkbox" name="hobby" value="music" id="check" checked />
-								<label for="check" class="modal-form-check-desk">I accept the terms and conditions of the </label>
+								<input class="modal-form-check visually-hidden" type="checkbox" name="hobby" id="check" />
+								<label for="check" class="modal-form-check-desk">
+									<span>
+										<svg width="10" height="8">
+											<use href="./images/symbol-defs.svg#icon-property-click"></use>
+										</svg>
+									</span>
+									I accept the terms and conditions of the&nbsp;<a href="" class="modal-form-link"> Privacy Policy</a>
+								</label>
+
 								<button class="hero-modal-send" type="submit">Send </button>
 							</form>
 						</div>
@@ -372,7 +380,7 @@
 					</li>
 					<li>
 						<h3 class="footer-title">Subscribe</h3>
-						<form class="footer-form" name="signup_form" autocomplete="on" novalidate>
+						<form class="footer-form" name="signup_form" autocomplete="on">
 							<label>
 								<input type="email" name="email" placeholder="E-mail" />
 							</label>
