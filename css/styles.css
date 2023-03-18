@@ -231,17 +231,7 @@ address {
 	fill: var(--white-color);
 	background-color: var(--hero-btn-color);
 }
-.modal-form-link {
-	font-family: "Roboto";
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: calc(16 / 12);
-	letter-spacing: 0.04em;
-	text-decoration-line: underline;
-	color: var(--firma-color);
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 .modal-form {
 	padding-top: 72px;
 	padding-left: 24px;
@@ -270,8 +260,12 @@ address {
 	color: var(--grey-color);
 	margin-bottom: 4px;
 }
+.form-boks {
+	position: relative;
+}
 .form-boks input {
 	padding: 8px 8px 8px 38px;
+	margin-bottom: 8px;
 	font-family: inherit;
 	width: 100%;
 	height: 40px;
@@ -317,6 +311,17 @@ address {
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form-link {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: calc(16 / 12);
+	letter-spacing: 0.04em;
+	text-decoration-line: underline;
+	color: var(--firma-color);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .hero-modal-send {
 	display: flex;
 	align-items: center;
@@ -342,29 +347,27 @@ address {
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-modal-send:is(:hover, :focus) {
-	background-color: var(--hero-btn-color);
-}
-.form-boks {
-	display: block;
-	position: relative;
-	margin-bottom: 8px;
-}
-.hero-modal-form input:focus {
-	border-color: var(--firma-color);
-}
-.hero-modal-form input:focus + .modal-form-icon {
-	fill: var(--firma-color);
-}
-.modal-form-icon {
+
+.form-boks svg {
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 16px;
 	transform: translateY(-50%);
+
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-modal-send:is(:hover, :focus) {
+	background-color: var(--hero-btn-color);
+}
+
+.hero-modal-form input:focus {
+	border-color: var(--firma-color);
+}
+.hero-modal-form input:focus + svg {
+	fill: var(--firma-color);
 }
 .modal-form-comment {
 	width: 100%;
